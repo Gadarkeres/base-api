@@ -19,12 +19,12 @@ public class ApiController {
   @Autowired
   private UserRepository repository;
 
-  @GetMapping("hello-world")
+  @GetMapping("/hello-world")
   public String Hello() {
     return "hello world!";
   }
 
-  @PostMapping("hello-world/post")
+  @PostMapping("/hello-world/post")
   public RequestResponseDTO HelloPost(@RequestBody RequestDTO request) {
     RequestDTO requestDTO = new RequestDTO();
     requestDTO.setName(request.getName());
