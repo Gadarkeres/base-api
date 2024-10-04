@@ -41,6 +41,11 @@ public class ApiController {
     return repository.findAll();
   }
 
+  @GetMapping("/users/login")
+  public User getUserByLogin(String login) {
+    return repository.findByLogin(login);
+  }
+
   @PostMapping("/users/insert")
   public void insertUser(@RequestBody User user) {
     repository.save(user);
