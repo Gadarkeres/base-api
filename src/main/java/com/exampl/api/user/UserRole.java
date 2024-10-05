@@ -1,4 +1,4 @@
-package com.exampl.api;
+package com.exampl.api.user;
 
 public enum UserRole {
   ADMIN("admin"),
