@@ -27,17 +27,6 @@ public class ApiController {
     return "hello world!";
   }
 
-  @PostMapping("/hello-world/post")
-  public RequestResponseDTO HelloPost(@RequestBody RequestDTO request) {
-    RequestDTO requestDTO = new RequestDTO();
-    requestDTO.setName(request.getName());
-    requestDTO.setAge(request.getAge());
-    requestDTO.setAddress(request.getAddress());
-
-    RequestResponseDTO requestResponseDTO = mapper.map(RequestDTO.class, RequestResponseDTO.class);
-
-    return requestResponseDTO;
-  }
 
   @GetMapping("/users")
   public List<User> getUsers() {
